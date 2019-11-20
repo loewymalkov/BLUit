@@ -18,19 +18,21 @@ class App extends React.Component {
     this.handleDownVoteClick = this.handleDownVoteClick.bind(this);
   }
 
+  // handles button click to upvote, +1 to votes
   handleUpVoteClick(index) {
     var newMasterPostList = this.state.masterPostList;
     newMasterPostList[index].votes ++;
     this.setState({ masterPostList: newMasterPostList}); 
   }
 
+  // handles button click to downvote, -1 to votes
   handleDownVoteClick(index) {
     var newMasterPostList = this.state.masterPostList;
     newMasterPostList[index].votes  --;
     this.setState({ masterPostList: newMasterPostList});
   }
 
-
+  
   handleAddingNewPostToList(newPost) {
     var newMasterPostList = this.state.masterPostList.slice();
     newMasterPostList.push(newPost);

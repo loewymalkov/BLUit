@@ -4,10 +4,12 @@ import 'materialize-css/dist/css/materialize.min.css';
 
 function Post (props) {
 
+  // method to call voteUp on props.index
   function handleUpVoteClick() {
     props.voteUp(props.index);
   }
 
+  // method to call voteDown on props.index
   function handleDownVoteClick() {
     props.voteDown(props.index);
   }
